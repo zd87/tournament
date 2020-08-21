@@ -1,14 +1,8 @@
 package tournament;
 
-public class Player {
-
-    private String name;
+public class Player extends Adversary {
 
     public Player(String name) {
-	this.name = name;
-    }
-
-    public String getName() {
-	return name;
+	super(name);
     }
 }

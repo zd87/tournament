@@ -6,9 +6,8 @@ public class CollectiveMatch extends Match {
 
     private Team teamTwo;
 
-    public CollectiveMatch(Team teamOne, Team teamTwo, int scoreOne,
-	    int scoreTwo) {
-	super(scoreOne, scoreTwo);
+    public CollectiveMatch(Team teamOne, Team teamTwo) {
+	super();
 	this.teamOne = teamOne;
 	this.teamTwo = teamTwo;
     }
@@ -17,7 +16,8 @@ public class CollectiveMatch extends Match {
     public void showResult() {
 	System.out.println(teamOne.getName() + " ("
 		+ teamOne.getPlayers().size() + ") " + " vs "
-		+ teamTwo.getName() + " (" + teamTwo.getPlayers().size() + ") "
-		+ " = " + getScoreOne() + "-" + getScoreTwo());
+		+ teamTwo.getName() + " (" + teamTwo.getPlayers().size() + ")");
+	System.out.println("* Half time score: " + getHalfTimeScore());
+	System.out.println("* Final score: " + getFinalScore());
     }
 }

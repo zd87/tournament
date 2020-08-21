@@ -6,16 +6,17 @@ public class IndividualMatch extends Match {
 
     private Player playerTwo;
 
-    public IndividualMatch(Player playerOne, Player playerTwo, int scoreOne,
-	    int scoreTwo) {
-	super(scoreOne, scoreTwo);
+    public IndividualMatch(Player playerOne, Player playerTwo) {
+	super();
 	this.playerOne = playerOne;
 	this.playerTwo = playerTwo;
     }
 
     @Override
     public void showResult() {
-	System.out.println(playerOne.getName() + " vs " + playerTwo.getName()
-		+ " = " + getScoreOne() + "-" + getScoreTwo());
+	System.out.println(
+		playerOne.getName() + " vs " + playerTwo.getName() + ":");
+	System.out.println("* Half time score: " + getHalfTimeScore());
+	System.out.println("* Final score: " + getFinalScore());
     }
 }
